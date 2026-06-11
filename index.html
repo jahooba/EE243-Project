@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>EE243project_clean</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>temp_notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7795,221 +7795,27 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">EE243project</span><span class="o">.</span><span class="n">ipynb</span>
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Names:</strong></p>
+<p>Sayantika Nag (snag007)</p>
+<p>Joshua Pena (jpena079)</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[NbConvertApp] WARNING | pattern '/content/EE243project.ipynb' matched no files
-This application is used to convert notebook files (*.ipynb)
-        to various other formats.
-
-        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
-=======
-The options below are convenience aliases to configurable class-options,
-as listed in the "Equivalent to" description-line of the aliases.
-To see all configurable class-options for some &lt;cmd&gt;, use:
-    &lt;cmd&gt; --help-all
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
-    Equivalent to: [--Application.log_level=10]
---show-config
-    Show the application's configuration (human-readable format)
-    Equivalent to: [--Application.show_config=True]
---show-config-json
-    Show the application's configuration (json format)
-    Equivalent to: [--Application.show_config_json=True]
---generate-config
-    generate default config file
-    Equivalent to: [--JupyterApp.generate_config=True]
--y
-    Answer yes to any questions instead of prompting.
-    Equivalent to: [--JupyterApp.answer_yes=True]
---execute
-    Execute the notebook prior to export.
-    Equivalent to: [--ExecutePreprocessor.enabled=True]
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if '--execute' was specified, too.
-    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename 'notebook.*'
-    Equivalent to: [--NbConvertApp.from_stdin=True]
---stdout
-    Write notebook output to stdout instead of files.
-    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only
-            relevant when converting to notebook format)
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
---clear-output
-    Clear output of current file and save in place,
-            overwriting the existing notebook.
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
---coalesce-streams
-    Coalesce consecutive stdout and stderr outputs into one stream (within each cell).
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --CoalesceStreamsPreprocessor.enabled=True]
---no-prompt
-    Exclude input and output prompts from converted document.
-    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
---no-input
-    Exclude input cells and output prompts from converted document.
-            This mode is ideal for generating code-free reports.
-    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
---allow-chromium-download
-    Whether to allow downloading chromium if no suitable version is found on the system.
-    Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
---disable-chromium-sandbox
-    Disable chromium security sandbox when converting to PDF..
-    Equivalent to: [--WebPDFExporter.disable_sandbox=True]
---show-input
-    Shows code input. This flag is only useful for dejavu users.
-    Equivalent to: [--TemplateExporter.exclude_input=False]
---embed-images
-    Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-    Equivalent to: [--HTMLExporter.embed_images=True]
---sanitize-html
-    Whether the HTML in Markdown cells and cell outputs should be sanitized..
-    Equivalent to: [--HTMLExporter.sanitize_html=True]
---log-level=&lt;Enum&gt;
-    Set the log level by value or name.
-    Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
-    Default: 30
-    Equivalent to: [--Application.log_level]
---config=&lt;Unicode&gt;
-    Full path of a config file.
-    Default: ''
-    Equivalent to: [--JupyterApp.config_file]
---to=&lt;Unicode&gt;
-    The export format to be used, either one of the built-in formats
-            ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf']
-            or a dotted object name that represents the import path for an
-            ``Exporter`` class
-    Default: ''
-    Equivalent to: [--NbConvertApp.export_format]
---template=&lt;Unicode&gt;
-    Name of the template to use
-    Default: ''
-    Equivalent to: [--TemplateExporter.template_name]
---template-file=&lt;Unicode&gt;
-    Name of the template file to use
-    Default: None
-    Equivalent to: [--TemplateExporter.template_file]
---theme=&lt;Unicode&gt;
-    Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-    as prebuilt extension for the lab template)
-    Default: 'light'
-    Equivalent to: [--HTMLExporter.theme]
---sanitize_html=&lt;Bool&gt;
-    Whether the HTML in Markdown cells and cell outputs should be sanitized.This
-    should be set to True by nbviewer or similar tools.
-    Default: False
-    Equivalent to: [--HTMLExporter.sanitize_html]
---writer=&lt;DottedObjectName&gt;
-    Writer class used to write the
-                                        results of the conversion
-    Default: 'FilesWriter'
-    Equivalent to: [--NbConvertApp.writer_class]
---post=&lt;DottedOrNone&gt;
-    PostProcessor class used to write the
-                                        results of the conversion
-    Default: ''
-    Equivalent to: [--NbConvertApp.postprocessor_class]
---output=&lt;Unicode&gt;
-    Overwrite base name use for output files.
-                Supports pattern replacements '{notebook_name}'.
-    Default: '{notebook_name}'
-    Equivalent to: [--NbConvertApp.output_base]
---output-dir=&lt;Unicode&gt;
-    Directory to write output(s) to. Defaults
-                                  to output to the directory of each notebook. To recover
-                                  previous default behaviour (outputting to the current
-                                  working directory) use . as the flag value.
-    Default: ''
-    Equivalent to: [--FilesWriter.build_directory]
---reveal-prefix=&lt;Unicode&gt;
-    The URL prefix for reveal.js (version 3.x).
-            This defaults to the reveal CDN, but can be any url pointing to a copy
-            of reveal.js.
-            For speaker notes to work, this must be a relative path to a local
-            copy of reveal.js: e.g., "reveal.js".
-            If a relative path is given, it must be a subdirectory of the
-            current directory (from which the server is run).
-            See the usage documentation
-            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-            for more details.
-    Default: ''
-    Equivalent to: [--SlidesExporter.reveal_url_prefix]
---nbformat=&lt;Enum&gt;
-    The nbformat version to write.
-            Use this to downgrade notebooks.
-    Choices: any of [1, 2, 3, 4]
-    Default: 4
-    Equivalent to: [--NotebookExporter.nbformat_version]
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to html
-
-            Options include ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf'].
-
-            &gt; jupyter nbconvert --to latex mynotebook.ipynb
-
-            Both HTML and LaTeX support multiple output templates. LaTeX includes
-            'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
-            'classic'. You can specify the flavor of the format used.
-
-            &gt; jupyter nbconvert --to html --template lab mynotebook.ipynb
-
-            You can also pipe the output to stdout, rather than a file
-
-            &gt; jupyter nbconvert mynotebook.ipynb --stdout
-
-            PDF is generated via latex
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-
-            You can get (and serve) a Reveal.js-powered slideshow
-
-            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-
-            Multiple notebooks can be given at the command line in a couple of
-            different ways:
-
-            &gt; jupyter nbconvert notebook*.ipynb
-            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-
-            or you can specify the notebooks list in a config file, containing::
-
-                c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
-
-            &gt; jupyter nbconvert --config mycfg.py
-
-To see all available configurables, use `--help-all`.
-
-</pre>
-</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Section-0:-Video-Link">Section 0: Video Link<a class="anchor-link" href="#Section-0:-Video-Link">¶</a></h1><p>Youtube link: <a href="https://youtu.be/ux6jaH9LsOQ">https://youtu.be/ux6jaH9LsOQ</a></p>
 </div>
 </div>
 </div>
@@ -8054,20 +7860,6 @@ To see all available configurables, use `--help-all`.
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:112: UserWarning: 
-The secret `HF_TOKEN` does not exist in your Colab secrets.
-To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
-You will be able to reuse this secret in all of your notebooks.
-Please note that authentication is recommended but still optional to access public models or datasets.
-  warnings.warn(
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>config.json:   0%|          | 0.00/4.19k [00:00&lt;?, ?B/s]</pre>
 </div>
@@ -8092,29 +7884,8 @@ WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated req
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>CLIPModel LOAD REPORT from: openai/clip-vit-base-patch32
-Key                                  | Status     |  | 
--------------------------------------+------------+--+-
-vision_model.embeddings.position_ids | UNEXPECTED |  | 
-text_model.embeddings.position_ids   | UNEXPECTED |  | 
-
-Notes:
-- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>preprocessor_config.json:   0%|          | 0.00/316 [00:00&lt;?, ?B/s]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>The image processor of type `CLIPImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. 
-</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -9402,7 +9173,7 @@ Notes:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Experiment-3:-CLIP-weakness-on-out-of-the-distribution-data--MNIST">Experiment 3: CLIP weakness on out of the distribution data- MNIST<a class="anchor-link" href="#Experiment-3:-CLIP-weakness-on-out-of-the-distribution-data--MNIST">¶</a></h2>
+<h2 id="Experiment-4:-CLIP-weakness-on-out-of-the-distribution-data--MNIST">Experiment 4: CLIP weakness on out of the distribution data- MNIST<a class="anchor-link" href="#Experiment-4:-CLIP-weakness-on-out-of-the-distribution-data--MNIST">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9416,6 +9187,7 @@ Notes:
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">MNIST</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="c1"># Load the Mnist data set:</span>
 <span class="n">mnist_test</span> <span class="o">=</span> <span class="n">MNIST</span><span class="p">(</span>
     <span class="n">root</span><span class="o">=</span><span class="s2">"./data"</span><span class="p">,</span>
@@ -9434,10 +9206,10 @@ Notes:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>100%|██████████| 9.91M/9.91M [00:00&lt;00:00, 15.1MB/s]
-100%|██████████| 28.9k/28.9k [00:00&lt;00:00, 494kB/s]
-100%|██████████| 1.65M/1.65M [00:00&lt;00:00, 4.59MB/s]
-100%|██████████| 4.54k/4.54k [00:00&lt;00:00, 13.0MB/s]
+<pre>100%|██████████| 9.91M/9.91M [00:00&lt;00:00, 16.9MB/s]
+100%|██████████| 28.9k/28.9k [00:00&lt;00:00, 478kB/s]
+100%|██████████| 1.65M/1.65M [00:00&lt;00:00, 4.11MB/s]
+100%|██████████| 4.54k/4.54k [00:00&lt;00:00, 2.84MB/s]
 </pre>
 </div>
 </div>
@@ -9536,23 +9308,8 @@ Notes:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>100%|██████████| 10000/10000 [03:37&lt;00:00, 45.91it/s]
+<pre>100%|██████████| 10000/10000 [03:07&lt;00:00, 53.33it/s]
 </pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_1104/2343048973.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 0&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span>     })
-<span class="ansi-green-intense-fg ansi-bold">     15</span> 
-<span class="ansi-green-fg">---&gt; 16</span><span class="ansi-red-fg"> </span>df <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>results<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> df<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined</pre>
 </div>
 </div>
 </div>
@@ -9581,7 +9338,7 @@ Notes:
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-6f0cdf60-5db7-4409-8c85-c8a2fe0fe4ab">
+<div class="colab-df-container" id="df-b2d6b411-9150-4362-809c-bb8145679f11">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -9653,7 +9410,7 @@ Notes:
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-6f0cdf60-5db7-4409-8c85-c8a2fe0fe4ab')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-b2d6b411-9150-4362-809c-bb8145679f11')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -9700,12 +9457,12 @@ Notes:
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-6f0cdf60-5db7-4409-8c85-c8a2fe0fe4ab button.colab-df-convert');
+        document.querySelector('#df-b2d6b411-9150-4362-809c-bb8145679f11 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6f0cdf60-5db7-4409-8c85-c8a2fe0fe4ab');
+        const element = document.querySelector('#df-b2d6b411-9150-4362-809c-bb8145679f11');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -9721,6 +9478,274 @@ Notes:
         docLink.innerHTML = docLinkHtml;
         element.appendChild(docLink);
       }
+    </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div class="colab-df-container" id="df-6dc2e102-bd68-4521-9187-6fcfd09d077e">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>index</th>
+<th>true_label</th>
+<th>pred_label</th>
+<th>confidence</th>
+<th>correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>0</td>
+<td>7</td>
+<td>2</td>
+<td>0.318351</td>
+<td>False</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>0.261386</td>
+<td>True</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>0.157818</td>
+<td>False</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.153450</td>
+<td>True</td>
+</tr>
+<tr>
+<th>4</th>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>0.145997</td>
+<td>False</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>9995</th>
+<td>9995</td>
+<td>2</td>
+<td>2</td>
+<td>0.302231</td>
+<td>True</td>
+</tr>
+<tr>
+<th>9996</th>
+<td>9996</td>
+<td>3</td>
+<td>3</td>
+<td>0.220006</td>
+<td>True</td>
+</tr>
+<tr>
+<th>9997</th>
+<td>9997</td>
+<td>4</td>
+<td>2</td>
+<td>0.164589</td>
+<td>False</td>
+</tr>
+<tr>
+<th>9998</th>
+<td>9998</td>
+<td>5</td>
+<td>7</td>
+<td>0.162174</td>
+<td>False</td>
+</tr>
+<tr>
+<th>9999</th>
+<td>9999</td>
+<td>6</td>
+<td>0</td>
+<td>0.200930</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>10000 rows × 5 columns</p>
+</div>
+<div class="colab-df-buttons">
+<div class="colab-df-container">
+<button class="colab-df-convert" onclick="convertToInteractive('df-6dc2e102-bd68-4521-9187-6fcfd09d077e')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
+<path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+</svg>
+</button>
+<style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+<script>
+      const buttonEl =
+        document.querySelector('#df-6dc2e102-bd68-4521-9187-6fcfd09d077e button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-6dc2e102-bd68-4521-9187-6fcfd09d077e');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+</div>
+<div id="id_f9d950b5-04c0-41ed-afa5-cf0bbc533233">
+<style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+<button class="colab-df-generate" onclick="generateWithVariable('df')" style="display:none;" title="Generate code using this dataframe.">
+<svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
+</svg>
+</button>
+<script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_f9d950b5-04c0-41ed-afa5-cf0bbc533233 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df');
+      }
+      })();
     </script>
 </div>
 </div>
@@ -10718,7 +10743,7 @@ mnist style: 100%|██████████| 10000/10000 [03:09&lt;00:00, 5
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Experiment-4:-CLIP-weakness-compared-to-VideoChat---Spatiotemporal-Reasoning-and-Causal-Inference">Experiment 4: CLIP weakness compared to VideoChat - Spatiotemporal Reasoning and Causal Inference<a class="anchor-link" href="#Experiment-4:-CLIP-weakness-compared-to-VideoChat---Spatiotemporal-Reasoning-and-Causal-Inference">¶</a></h2><p>As highlighted in the VideoChat paper, vision models often struggle with event localization and causal relationships. Since CLIP processes images as a whole without an inherent understanding of time or sequence, let's test if it can distinguish the direction of a simple event using a synthetic 'Before and After' panel.</p>
+<h2 id="Experiment-5:-CLIP-weakness-compared-to-VideoChat---Spatiotemporal-Reasoning-and-Causal-Inference">Experiment 5: CLIP weakness compared to VideoChat - Spatiotemporal Reasoning and Causal Inference<a class="anchor-link" href="#Experiment-5:-CLIP-weakness-compared-to-VideoChat---Spatiotemporal-Reasoning-and-Causal-Inference">¶</a></h2><p>As highlighted in the VideoChat paper, vision models often struggle with event localization and causal relationships. Since CLIP processes images as a whole without an inherent understanding of time or sequence, let's test if it can distinguish the direction of a simple event using a synthetic 'Before and After' panel.</p>
 </div>
 </div>
 </div>
@@ -10886,7 +10911,7 @@ If CLIP assigns similar probabilities to 'left to right' and 'right to left', it
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Experiment-5:-CLIP-weakness-compared-to-VideoChat---Event-Localization-in-a-Sequence">Experiment 5: CLIP weakness compared to VideoChat - Event Localization in a Sequence<a class="anchor-link" href="#Experiment-5:-CLIP-weakness-compared-to-VideoChat---Event-Localization-in-a-Sequence">¶</a></h2><p>The paper points out that vision models struggle with <strong>event localization</strong>. This means identifying the exact moment or state of an ongoing action in a video. Let's simulate a 3-frame sequence of a ball falling and see if CLIP can precisely match the correct frame to the description of the event's stage.</p>
+<h2 id="Experiment-6:-CLIP-weakness-compared-to-VideoChat---Event-Localization-in-a-Sequence">Experiment 6: CLIP weakness compared to VideoChat - Event Localization in a Sequence<a class="anchor-link" href="#Experiment-6:-CLIP-weakness-compared-to-VideoChat---Event-Localization-in-a-Sequence">¶</a></h2><p>The paper points out that vision models struggle with <strong>event localization</strong>. This means identifying the exact moment or state of an ongoing action in a video. Let's simulate a 3-frame sequence of a ball falling and see if CLIP can precisely match the correct frame to the description of the event's stage.</p>
 </div>
 </div>
 </div>
@@ -10899,6 +10924,8 @@ If CLIP assigns similar probabilities to 'left to right' and 'right to left', it
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># 1. Create frames simulating a video of an object falling</span>
 <span class="n">img_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
@@ -11030,201 +11057,8 @@ If CLIP heavily mixes up the states (e.g., confidently predicting the 'End' prom
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>If you look at the plot in your notebook, you'll notice that CLIP doesn't produce a perfect diagonal. Instead, it assigns high probabilities across multiple frames for the same prompt, or gets confused between the 'Start', 'Middle', and 'End' stages.</p>
+<p>CLIP fails to produce a perfect diagonal, meaning it confuses the states. Instead, it assigns high probabilities across multiple frames for the same prompt, or gets confused between the 'Start', 'Middle', and 'End' stages.</p>
 <p>This perfectly illustrates the second weakness mentioned in the VideoChat paper: struggling with event localization. Because CLIP doesn't understand the process of falling or the specific physical state of the action, it simply sees a 'red ball' and 'gray ground' in all frames and struggles to isolate the exact temporal stage.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Experiment-6:-VideoChat-strengths---Demonstrating-the-Strength-of-Vision-Language-Integration">Experiment 6: VideoChat strengths - Demonstrating the Strength of Vision-Language Integration<a class="anchor-link" href="#Experiment-6:-VideoChat-strengths---Demonstrating-the-Strength-of-Vision-Language-Integration">¶</a></h2><p>The VideoChat paper highlights that integrating visual encoders with Large Language Models (LLMs) creates a system with strong <strong>spatial perception and reasoning capacity</strong>. While running the full VideoChat model requires significant GPU resources, we can demonstrate this <em>exact paradigm shift</em> using a lightweight Vision-Language Model (VLM) like BLIP.</p>
-<p>We will use BLIP to perform Visual Question Answering (VQA) on our synthetic sequences. This shows how a model with generative language capabilities can understand spatial relationships and intermediate event states, succeeding where CLIP failed.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BlipProcessor</span><span class="p">,</span> <span class="n">BlipForQuestionAnswering</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Loading BLIP VQA model to demonstrate VLM reasoning capabilities..."</span><span class="p">)</span>
-<span class="c1"># We use a small, efficient VLM to demonstrate the reasoning paradigm mentioned in the paper</span>
-<span class="n">blip_processor</span> <span class="o">=</span> <span class="n">BlipProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">"Salesforce/blip-vqa-base"</span><span class="p">)</span>
-<span class="n">blip_model</span> <span class="o">=</span> <span class="n">BlipForQuestionAnswering</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">"Salesforce/blip-vqa-base"</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Model loaded successfully!"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Loading BLIP VQA model to demonstrate VLM reasoning capabilities...
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Loading weights:   0%|          | 0/788 [00:00&lt;?, ?it/s]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>The tied weights mapping and config for this model specifies to tie text_decoder.bert.embeddings.word_embeddings.weight to text_decoder.cls.predictions.decoder.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
-BlipForQuestionAnswering LOAD REPORT from: Salesforce/blip-vqa-base
-Key                                       | Status     |  | 
-------------------------------------------+------------+--+-
-text_encoder.embeddings.position_ids      | UNEXPECTED |  | 
-text_decoder.bert.embeddings.position_ids | UNEXPECTED |  | 
-
-Notes:
-- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Model loaded successfully!
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># Let's test the model on the Event Localization frames from Experiment 7</span>
-<span class="c1"># Frames: frames[0] (Start), frames[1] (Middle), frames[2] (End)</span>
-
-<span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">"Where is the red ball located?"</span><span class="p">,</span>
-    <span class="s2">"Is the red ball touching the gray ground?"</span>
-<span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"--- Testing Spatial &amp; State Reasoning on Individual Frames ---"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">frames</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Analyzing </span><span class="si">{</span><span class="n">frame_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-
-    <span class="c1"># Display the frame briefly for context</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
-
-    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
-        <span class="c1"># Process the image and the specific question</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="n">blip_processor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">"pt"</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
-
-        <span class="c1"># Generate the answer using the language decoder</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="n">blip_model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
-        <span class="n">answer</span> <span class="o">=</span> <span class="n">blip_processor</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Q: </span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  A: </span><span class="si">{</span><span class="n">answer</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>--- Testing Spatial &amp; State Reasoning on Individual Frames ---
-
-Analyzing Frame 1 (Start):
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
-<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAADDUlEQVR4Ae3czS5rURjG8dVqQmrQMCh3IoKYkBiJCzAy4i5MDXsHDFwAE6FEjFwLAyFBKz6Wd6eNk4Oj/a+devdpnh0D0Wdlrf3r0+7uJWkpxhh09CdQ7i+mVCYgLNADYQkLCIComiUsIACiapawgACIVkD2d6J3d+HtrTtVrRbKBep+YbAM6OQkXFyE3d3w9NTFmpkJi4thYyPU67/zTPWYxW53/I/j47iyEkdG7M7rm596PW5vx4cH93UG9xXEw8NYrX5j9AluddXdyxvLpMbHe0t14Mzr/t7x2XXFOjsDUh2vtbX48uLl5Ydl57y01G+nPl6S5XJsNr2w/C7Mp6fh/LzH1efrw3bR3Nn5c7n8GhjkX5ywbMex2QyvrymndnkZbm5SBuYe44Rlnzz39xMX//gY9vYSx+Yb5oRlzWq3E1eeZ2zilN1hTlg2e6mUvvI8Y9Nn9dpWtnY8P6cvO8/Y9Fm9sKrVMDeXuOzR0TA/nzg23zCnl+HYWFheTlz5xERYWEgcm2+YE5Yten09cS9hczNYMT0OP6ypqbC1hU95cjIb5fQG73e7Y/cst7fR7o0/bmV6/mK33AcHXvc6Nq8rls1vu1R9epmUbVG4Ht5YHS/bS/jXzl+nbrb/5y1lKy0Alq3CdiCOjrLN0lrtr1elCU5PZ9ukV1eulepOXsrACnLYjsL19ec9+NnZYP+2KMZRJKxiiPywCr+PDj8sqqgPCQs8M8ISFhAAUTVLWEAARNUsYQEBEFWzhAUEQFTNEhYQAFE1S1hAAETVLGEBARBVs4QFBEBUzRIWEABRNUtYQABE1SxhAQEQVbOEBQRAVM0SFhAAUTVLWEAARNUsYQEBEFWzhAUEQFTNEhYQAFE1S1hAAETVLGEBARBVs4QFBEBUzRIWEABRNUtYQABE1SxhAQEQVbOEBQRAVM0SFhAAUTVLWEAARNUsYQEBEFWzAFalnfytjmCWIYlWGo3GkJzK4E+j0mq1Bj/LkMxQKXl9Jdx/CKg3ePCkCUtYQABE1SxhAQEQVbOEBQRA9B1TlN256laUyAAAAABJRU5ErkJggg==
-"/>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Q: Where is the red ball located?
-  A: In air
-  Q: Is the red ball touching the gray ground?
-  A: Yes
-
-Analyzing Frame 2 (Middle):
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
-<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAADDklEQVR4Ae3bzy4zURzG8dNqQmrRsCh3IoLYkFiJC7Cy4i5sLXsHLFwAG6FErFwLCyFBK/4cv0kbb1682u+Z1G/e5plYCM/JOfOZp8YcWooxBh39CZT7iymVCQgL9EBYwgICIKpmCQsIgKiaJSwgAKJqlrCAAIiqWcICAiCqZgkLCIComiUsIACiapawgACIqlnCAgIgqmYJCwiAqJolLCAAomqWsIAAiKpZwgICIKpmCQsIgKiaJSwgAKJqlrCAAIiqWcICAiCqZgkLCIComiUsIACiapawgACIqlkAqwKyvxO9uwtvb92parVQLtDlLAyWAZ2chIuLsLsbnp66WDMzYXExbGyEev13rlSPWexdYf7H8XFcWYkjI/YGtW8+6vW4vR0fHtzXGdxXEA8PY7X6jdEnuNVVdy9vLJMaH+8t1YEzr/t7x6vrinV2BqQ6Xmtr8eXFy8sPy855aanfTn28JMvl2Gx6YfndmE9Pw/l5j7vP12/bTXNn58/t8mtgkF9xwrI3Zjeb4fU15dQuL8PNTcrA3GOcsOw3z/39xMU/Poa9vcSx+YY5YVmz2u3ElecZmzhld5gTls1eKqWvPM/Y9Fm93n1v7Xh+Tl92nrHps3phVathbi5x2aOjYX4+cWy+YU4vw7GxsLycuPKJibCwkDg23zAnLFv0+nriXsLmZrBiehx+WFNTYWsLn/LkZDbK6Qe83+OOPbPc3kZ7Nv54lOn5iT1yHxx4PevYvK5YNr/tUvXpZVK2ReF6eGN1vGwv4V87f5262f6ft5SttABYtgrbgTg6yjZLa7W/XpUmOD2dbZNeXblWqjt5KQMryGE7CtfXn/fgZ2eD/dmiGEeRsIoh8sMq/H51+GFRRf2WsMCVEZawgACIqlnCAgIgqmYJCwiAqJolLCAAomqWsIAAiKpZwgICIKpmCQsIgKiaJSwgAKJqlrCAAIiqWcICAiBaaSf/uyKYZUiilUajMSSnMvjTqLRarcHPMiQzVEpe/+v0HwLqbggumrCEBQRAVM0SFhAAUTVLWEAARN8BeRrduWOg7T8AAAAASUVORK5CYII=
-"/>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Q: Where is the red ball located?
-  A: In sky
-  Q: Is the red ball touching the gray ground?
-  A: Yes
-
-Analyzing Frame 3 (End):
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
-<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAADT0lEQVR4Ae3cv04iURgF8HuHCRJM/FegBYWPsJ2FGhOjiZXR3srC6FtYYukbaOEDqJWia6y09Bk222I0EQYV5+43gbAbJAvnDuvHJmdioXgu986PA/OnwDrnDLf+BIL+YkwlAsQCekAsYgECQJTNIhYgAETZLGIBAkCUzSIWIABE2SxiAQJAlM0iFiAARNksYgECQJTNIhYgAETZLGIBAkCUzSIWIABE2SxiAQJAlM0iFiAARNksYgECQJTNIhYgAETZLGIBAkCUzSIWIABE2SxiAQJAlM0iFiAARNksYgECQJTNIhYgAETZLGIBAkCUzSIWIABE2SxiAQJAlM0iFiAARNksYgECQJTNIhYgAETZLGIBAkCUzSIWIABE2SxiAQJAlM0iFiAARNksYgECQJTNIhYgAETZLGIBAkA0BLJfE31+NnHcmmp83ARD1P2hwRKgy0tze2uOjszrawtrbs4sLZntbVMofM0r1WMW+epN/e3iwq2tuUxGvgW0y0+h4Pb3XbWqvk6jvgJ3duby+S5GHXDr6+pe2lgiNTraW6oJJ14vL4qvrirW9TUg1fTa2HCNhpaXHpbs88pKv51qvyWDwJXLWlh6B+arK3Nz0+Po8/nfctA8OPh9uPwc+JePKGHJt1+Xy+bjw2fX7u7M46PPwNRjlLDkzPPkxHPxtZo5PvYcm26YEpY0q173XHmasZ5TtoYpYcns1vqvPM1Y/1m1vuJc2vH+7r/sNGP9Z9XCyufN/LznskdGzMKC59h0w5TehrmcWV31XPnkpFlc9BybbpgSlix6a8vzXsLurpFiamx6WNPTZm8P3uWpqWSU0ge83uWOXLM8PTm5Nm5fyvT8RS65T0+1rnVkXlUsmV/uUvXpJVJyi0J108aSna/V3OamC8O/VWxmxp2fq0Ilk9soiuAPjsEOkLvsct4k9xIOD+39fe6PM3tnbX1iwu7sJJ9TxWKqU7NBrNmWSqVBPE+65xCvbNZEUVipfHt4CBuN5tP9LBZ/zM4GcgP+7S256pZPDdUt1G9Wc/+rVTnGubGx78vLbZAgjjNiVKm0H9H9JbRah+Fu+23jOCsl6tiGZoV651kdIv/Dn8QCXiViEQsQAKJsFrEAASDKZgFYvwAYf+Krs3LqaQAAAABJRU5ErkJggg==
-"/>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>  Q: Where is the red ball located?
-  A: In air
-  Q: Is the red ball touching the gray ground?
-  A: Yes
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Interpretation-of-VLM-Strengths">Interpretation of VLM Strengths<a class="anchor-link" href="#Interpretation-of-VLM-Strengths">¶</a></h3><p>As shown in the output above, a generative Vision-Language Model (the foundation of VideoChat) can explicitly articulate the physical state of the object (e.g., determining if the ball is touching the ground or answering where it is located).</p>
-<p>This empirically confirms the paper's claims: <strong>by integrating vision models with conversational language models, the system gains the precise spatial reasoning and state-awareness required for event localization</strong>, which standard contrastive models like CLIP fundamentally lack.</p>
 </div>
 </div>
 </div>
@@ -11584,6 +11418,17 @@ Device: cuda
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Experiment-9:-Object-relationship">Experiment 9: Object relationship<a class="anchor-link" href="#Experiment-9:-Object-relationship">¶</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11762,7 +11607,7 @@ a cat in the grass                   0.0003
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="VQA-using-SigLIP:">VQA using SigLIP:<a class="anchor-link" href="#VQA-using-SigLIP:">¶</a></h2>
+<h2 id="Experiment-10:-VQA-using-SigLIP:">Experiment 10: VQA using SigLIP:<a class="anchor-link" href="#Experiment-10:-VQA-using-SigLIP:">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12148,7 +11993,7 @@ Answer: playing
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Weakness-of-SigLIP-and-Peligemma:">Weakness of SigLIP and Peligemma:<a class="anchor-link" href="#Weakness-of-SigLIP-and-Peligemma:">¶</a></h2>
+<h2 id="Experiment-11:-Weakness-of-SigLIP-and-Peligemma:-Counting">Experiment 11: Weakness of SigLIP and Peligemma: Counting<a class="anchor-link" href="#Experiment-11:-Weakness-of-SigLIP-and-Peligemma:-Counting">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12823,6 +12668,17 @@ Confidence: 0.5105695
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Counting-with-SigLIP">Counting with SigLIP<a class="anchor-link" href="#Counting-with-SigLIP">¶</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -13475,7 +13331,7 @@ Confidence: 0.3967182
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Experiment-on-the-MNIST">Experiment on the MNIST<a class="anchor-link" href="#Experiment-on-the-MNIST">¶</a></h3>
+<h2 id="Experiment-12:-Experiment-on-the-MNIST">Experiment 12: Experiment on the MNIST<a class="anchor-link" href="#Experiment-12:-Experiment-on-the-MNIST">¶</a></h2>
 </div>
 </div>
 </div>
