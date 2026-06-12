@@ -13,6 +13,9 @@ The full implementation and experiments are available in Google Colab:
 ## Youtube Link:
 [Youtube link](https://youtu.be/ux6jaH9LsOQ?si=Hu1cqfGzbD0tTr6D)
 
+## Project Interpretation Report:
+[Project Report](https://github.com/jahooba/EE243-Project/blob/8a95c1d8743c927c24733b5abaa5af740f171efc/InterpretationReport.pdf)
+
 ## Project Website 
 
 The GitHub Pages website for this project is available here:
