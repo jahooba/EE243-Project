@@ -1,4 +1,4 @@
-````markdown
+
 # EE243 Final Project: Limitations and Improvements of Vision-Language Models
 
 This repository contains the code, experiments, results, and project report for my EE243 final project on vision-language models. The project studies the limitations of CLIP and compares it with newer vision-language models such as SigLIP, PaliGemma, ViLT, and Video-Language Models.
@@ -154,7 +154,6 @@ CLIP is useful for broad image-text matching and zero-shot classification, but i
 Newer models such as SigLIP, PaliGemma, and ViLT improve some of these weaknesses, but they do not completely solve visual reasoning. Future vision-language models need stronger object-level grounding, better compositional reasoning, improved temporal memory, and more robust prompt handling.
 
 ## Repository Structure
-
 ```text
 EE243-Project/
 │
