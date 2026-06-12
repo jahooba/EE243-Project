@@ -3,20 +3,23 @@
 
 This repository contains the code, experiments, results, and project report for my EE243 final project on vision-language models. The project studies the limitations of CLIP and compares it with newer vision-language models such as SigLIP, PaliGemma, ViLT, and Video-Language Models.
 
-## Project Website
-
-The GitHub Pages website for this project is available here:
-
-[Project Website](https://jahooba.github.io/EE243-Project/)
 
 ## Google Colab Notebook
 
-The full implementation and experiments are available in Google Colab:
+The full implementation and experiments are available in Google Colab: 
 
 [Open Google Colab Notebook](https://colab.research.google.com/drive/1fFjooLLGr-9ZvYuZBAKkZ51MTEmqxJrK?authuser=1#scrollTo=bX0yH5R91mKE)
 
 ## Youtube Link:
 [Youtube link](https://youtu.be/ux6jaH9LsOQ?si=Hu1cqfGzbD0tTr6D)
+
+## Project Website 
+
+The GitHub Pages website for this project is available here:
+
+[Project Website](https://jahooba.github.io/EE243-Project/)
+
+
 
 ## Project Overview
 
@@ -153,31 +156,14 @@ CLIP is useful for broad image-text matching and zero-shot classification, but i
 
 Newer models such as SigLIP, PaliGemma, and ViLT improve some of these weaknesses, but they do not completely solve visual reasoning. Future vision-language models need stronger object-level grounding, better compositional reasoning, improved temporal memory, and more robust prompt handling.
 
-## Repository Structure
-```text
-EE243-Project/
-│
-├── index.html
-├── README.md
-├── assets/
-│   ├── clip_dog_cat_result.png
-│   ├── prompt_sensitivity.png
-│   ├── gradcam_result.png
-│   ├── mnist_results.png
-│   ├── video_llm_result.png
-│   └── counting_vqa_result.png
-│
-└── notebooks/
-    └── EE243_Project.ipynb
-````
+
 
 ## How to Run
 
 1. Open the Google Colab notebook.
 2. Run the setup cells to install required libraries.
 3. Run each experiment section one by one.
-4. Save generated figures into the `assets/` folder.
-5. Update the GitHub Pages website with the final figures and results.
+4. Update the GitHub Pages website with the final figures and results.
 
 ## Tools and Libraries
 
