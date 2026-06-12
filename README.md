@@ -59,88 +59,174 @@ The project studies and compares the following models:
 
 ## Experiments
 
-### 1. Object Relationship Failure in CLIP
+This project is divided into three main experimental sections. The first section studies the limitations of CLIP, the second section compares CLIP with VideoChat-style video-language models, and the third section studies newer frontier models such as SigLIP, PaliGemma, and ViLT.
 
-This experiment tests whether CLIP can distinguish between prompts such as:
+### Section 1: CLIP Limitations
+
+#### Experiment 1: Object Relationship Failure in CLIP
+
+This experiment tested whether CLIP can distinguish between prompts involving the same objects but different relationships. The image contained a dog and a cat, and CLIP was asked to compare prompts such as:
 
 - `a dog chasing a cat`
 - `a cat chasing a dog`
 - `a dog next to a cat`
 - `a cat next to a dog`
+- `a dog and a cat in the grass`
 
-The results show that CLIP can identify the objects in the image, but it often struggles with the relationship between them. This suggests that CLIP may rely heavily on object words such as “dog” and “cat” instead of fully understanding subject-object structure.
+The results showed that CLIP can recognize that the image contains a dog and a cat, but it struggles to understand the exact relationship between them. For example, CLIP assigned high probabilities to both `a dog chasing a cat` and `a cat chasing a dog`, even though the meanings are opposite.
 
-### 2. Prompt Sensitivity
+This suggests that CLIP is sensitive to object words such as `dog`, `cat`, and `grass`, but less reliable when the correct answer depends on word order, action direction, or subject-object structure.
 
-This experiment tests whether changing the prompt wording affects CLIP’s output. Different templates were used, such as:
+#### Experiment 2: Prompt Sensitivity in CLIP
+
+This experiment tested whether CLIP’s prediction changes when the wording of the prompt changes. The same image and answer choices were tested using different prompt templates, including:
 
 - `Question: {} Answer: {}`
 - `Q: {} A: {}`
 - `The answer to '{}' is '{}'`
 - `This image shows '{}'`
 
-The results show that CLIP can be sensitive to prompt phrasing. In some examples, the prediction changed even though the image and answer choices stayed the same.
+For one image, CLIP was stable across all templates and produced a prompt consistency score of 1.0. However, for another image, the consistency score dropped to 0.75. In that case, CLIP changed its prediction depending on the prompt wording.
 
-### 3. Localization with Grad-CAM
+This shows that CLIP is prompt-sensitive. Its output depends not only on the image, but also on how the text prompt is written.
 
-Grad-CAM was used to examine whether CLIP focuses on the correct visual regions when making predictions. This experiment helps determine whether the model is actually looking at the object or region described by the text prompt.
+#### Experiment 3: Localization Limitation Using Grad-CAM
 
-The results suggest that CLIP’s visual grounding is not always precise. A model can produce a plausible label while focusing on incomplete or incorrect image regions.
+This experiment used Grad-CAM to examine whether CLIP focuses on the correct image regions when making predictions. The model was prompted with labels such as:
 
-### 4. Zero-Shot MNIST Classification
+- `a dog`
+- `a cat`
+- `a dog and a cat`
 
-CLIP was tested on MNIST handwritten digits using zero-shot prompts. MNIST is very different from the natural image-text data used to train CLIP.
+The goal was to see whether CLIP’s prediction was supported by correct spatial attention.
 
-The results show that CLIP performs poorly on this out-of-distribution task. This demonstrates that CLIP’s zero-shot ability depends strongly on the pretraining distribution.
+The results showed that CLIP may recognize the general scene but does not always localize the correct object or relationship precisely. This means that a high-confidence prediction does not always imply strong visual grounding.
 
-### 5. Temporal Reasoning
+This limitation is important for tasks that require spatial precision, such as segmentation, object counting, relationship reasoning, or visual question answering.
 
-This experiment tested whether CLIP can understand a before-and-after image sequence, such as a blue circle moving from left to right.
+#### Experiment 4: CLIP on Out-of-Distribution MNIST
 
-CLIP struggles with this task because it is not designed to model temporal order. It processes the image globally and does not naturally understand sequence, motion, or causality.
+This experiment tested CLIP on handwritten digit recognition using zero-shot prompts. MNIST is out-of-distribution for CLIP because it contains grayscale handwritten digits, while CLIP was mainly trained on natural image-text pairs from the web.
 
-### 6. Video-Language Model Long-Context Failure
+CLIP performed poorly on this task. In the project results, CLIP achieved about 22.7% accuracy using a handwritten-digit prompt style and about 25.3% accuracy in another comparable zero-shot MNIST setting. Some prompt styles performed slightly better, such as the `number only` prompt style, but the overall accuracy remained low.
 
-A video-language model was tested on a video where a blue square appeared briefly at the beginning and was later replaced by a red square.
+This shows that CLIP does not automatically generalize well to specialized visual domains. Prompt engineering can affect performance, but it does not fully solve the domain mismatch.
 
-The model incorrectly stated that there was no blue square. This shows that even video-language models can miss short-lived events when the majority of frames show something else.
+---
 
-### 7. SigLIP Comparison
+### Section 2: CLIP vs VideoChat
 
-SigLIP was tested as an improvement over CLIP. SigLIP performed better than CLIP on some tasks, especially MNIST zero-shot classification.
+#### Experiments 5, 6, and 7: Spatiotemporal Reasoning and Causal Inference
 
-However, SigLIP still struggled with fine-grained relationship reasoning. This shows that improving the image-text training objective does not fully solve compositional reasoning.
+This section compared CLIP with a VideoChat-style video-language model.
 
-### 8. PaliGemma and ViLT for VQA
+CLIP was tested on a synthetic before-and-after image sequence where a blue circle changed position from the left panel to the right panel. The model was asked to distinguish between prompts such as:
 
-PaliGemma and ViLT were studied as models more suitable for visual question answering.
+- `a blue circle moves from left to right`
+- `a blue circle moves from right to left`
+- `two blue circles are sitting still`
 
-PaliGemma is not the same as ViLT. PaliGemma combines a SigLIP vision encoder with a Gemma language decoder, which allows it to generate text answers. ViLT is a Vision-and-Language Transformer often used for classification-style VQA tasks.
+This task requires temporal reasoning because the model must understand that the left image represents an earlier state and the right image represents a later state.
 
-These models are better suited for VQA than CLIP because they are designed to process both images and questions more directly.
+CLIP struggled with this task because it does not naturally model time, sequence, or causality. It processes the image globally and may recognize the objects, but it does not reliably infer motion direction.
 
-### 9. Counting Experiment
+#### Video-Language Model Long-Context Experiment
 
-The counting experiment tested questions such as:
+The project then tested a Video-LLM on a video where a blue square appeared briefly in the first few frames and was later replaced by a red square.
 
-- How many dogs are in the image?
-- How many cats are in the image?
-- How many animals are in the image?
+The model incorrectly answered that the video showed only a red square and that there was no blue square. This was wrong because the blue square did appear, but only briefly at the beginning.
 
-CLIP and SigLIP showed uncertainty in counting tasks, while ViLT performed better on explicit visual question answering. This suggests that counting requires stronger object-level grounding than simple image-text similarity.
+This experiment shows that video-language models improve over CLIP by adding temporal information, but they still struggle with long-context video understanding. Short-lived events can be lost when the model summarizes the dominant content of the video.
+
+---
+
+### Section 3: SigLIP, PaliGemma, and ViLT
+
+#### Experiment 9: SigLIP Object Relationship and Prompting
+
+This experiment repeated the dog-cat object relationship task using SigLIP.
+
+SigLIP performed better than vanilla CLIP on some prompts because SigLIP uses a sigmoid loss instead of CLIP’s softmax contrastive loss. This training objective improves image-text alignment and scalability.
+
+However, SigLIP still did not fully solve the relational reasoning problem. It still relies on ranking image-text similarities, so it can inherit CLIP-like weaknesses in compositional reasoning.
+
+#### Experiment 10: Multiple-Choice VQA with SigLIP
+
+This experiment adapted SigLIP for multiple-choice visual question answering. Each possible answer was converted into a text prompt, and SigLIP ranked the choices by image-text similarity.
+
+This approach worked to some extent, but it is not true generative VQA. SigLIP cannot naturally produce an open-ended answer. It can only choose from the candidate answers provided.
+
+In the dog-cat VQA example, SigLIP preferred a broad scene-level description such as `a dog and a cat in the grass` rather than a more precise relational answer. This shows that SigLIP is stronger at scene matching than detailed action reasoning.
+
+#### Experiment 11: PaliGemma and Generative VQA
+
+This experiment discussed PaliGemma as a better model for open-ended visual question answering.
+
+PaliGemma combines a SigLIP vision encoder with a Gemma language decoder. The vision encoder processes the image, and the language decoder generates a natural-language answer from the visual features and the text prompt.
+
+This is different from CLIP and SigLIP, which mainly compare image and text embeddings. PaliGemma is more suitable for open-ended VQA, image captioning, and instruction-following because it can generate answers instead of only ranking fixed text prompts.
+
+#### Counting Experiment: SigLIP vs ViLT
+
+This experiment tested whether models could answer counting questions such as:
+
+- `How many dogs are in the image?`
+- `How many cats are in the image?`
+- `How many animals are in the image?`
+
+SigLIP was uncertain in the counting task. For example, it assigned close probabilities to `one dog` and `two dogs`, showing that it was not confident.
+
+ViLT performed better on explicit counting questions. It answered `2` for dogs, `0` for cats, and `2` for animals with high confidence.
+
+This suggests that counting requires object-level grounding and VQA-specific training. CLIP and SigLIP are not primarily designed for counting, while ViLT is better suited for structured visual question answering.
+
+#### Experiment 12: SigLIP and CLIP on MNIST
+
+The final experiment compared SigLIP and CLIP on zero-shot MNIST classification.
+
+SigLIP performed much better than CLIP. In the project results, SigLIP achieved around 78.6% accuracy on 1000 MNIST samples, while CLIP achieved around 25.3% in a comparable zero-shot setting.
+
+This shows that newer vision-language models can improve zero-shot transfer. However, SigLIP still does not match the performance of a supervised MNIST classifier trained directly on digit labels.
+
+---
+
+### Experiment Summary
+
+| Experiment | Model(s) | Main Purpose | Main Result |
+|---|---|---|---|
+| Object relationship reasoning | CLIP | Test whether CLIP understands subject-object relationships | CLIP recognized objects but struggled with relationships such as dog chasing cat vs cat chasing dog |
+| Prompt sensitivity | CLIP | Test whether wording changes predictions | CLIP predictions changed for some prompt templates |
+| Grad-CAM localization | CLIP | Check whether CLIP focuses on correct visual regions | CLIP did not always show precise visual grounding |
+| MNIST zero-shot | CLIP | Test out-of-distribution generalization | CLIP performed poorly on handwritten digits |
+| Spatiotemporal reasoning | CLIP | Test motion and before-after reasoning | CLIP struggled with temporal order and motion direction |
+| Long video context | VideoChat / Video-LLM | Test whether video models remember short events | The model missed a briefly appearing blue square |
+| Object relationship with SigLIP | SigLIP | Test whether SigLIP improves CLIP’s relational reasoning | SigLIP improved some results but still had reasoning limitations |
+| Multiple-choice VQA | SigLIP | Test image-text ranking for VQA | SigLIP worked only when answers were provided as choices |
+| Generative VQA | PaliGemma | Study open-ended VQA | PaliGemma is better suited for generated answers |
+| Counting | SigLIP and ViLT | Test object counting ability | ViLT performed better than SigLIP on explicit counting |
+| MNIST comparison | CLIP and SigLIP | Compare zero-shot digit recognition | SigLIP achieved around 78.6%, while CLIP achieved around 25.3% |
+
+
 
 ## Summary of Findings
 
-| Task | Main Finding |
-|---|---|
-| Object relationship reasoning | CLIP recognizes objects but struggles with subject-object relationships. |
-| Prompt sensitivity | CLIP predictions can change depending on wording. |
-| Localization | CLIP does not always focus on the correct visual regions. |
-| MNIST zero-shot classification | CLIP performs poorly on out-of-distribution handwritten digits. |
-| Temporal reasoning | CLIP struggles with sequence and motion direction. |
-| Long video context | Video-language models can miss short events. |
-| SigLIP comparison | SigLIP improves some tasks but still has reasoning limitations. |
-| VQA and counting | ViLT and PaliGemma-style models are better suited for VQA than CLIP. |
+The experiments show that CLIP is a strong vision-language alignment model, but it is not a complete visual reasoning system. CLIP performs well when the task only requires matching an image with a broad text description, but it struggles when the task requires deeper reasoning about relationships, spatial grounding, temporal order, counting, or out-of-distribution data.
+
+| Experiment / Task | Model(s) | Summary of Finding |
+|---|---|---|
+| Object relationship reasoning | CLIP | CLIP recognized that the image contained a dog and a cat, but it struggled to distinguish relationships such as “a dog chasing a cat” versus “a cat chasing a dog.” This suggests that CLIP is sensitive to object words but weaker at subject-object reasoning. |
+| Prompt sensitivity | CLIP | CLIP’s predictions changed when the prompt template changed. This shows that CLIP’s output depends not only on the image, but also on the exact wording of the text prompt. |
+| Visual localization | CLIP + Grad-CAM | Grad-CAM showed that CLIP does not always focus on the correct visual region. A correct or high-confidence prediction does not always mean that the model is visually grounded in the right object. |
+| Out-of-distribution recognition | CLIP on MNIST | CLIP performed poorly on zero-shot MNIST digit classification. This shows that CLIP does not automatically generalize well to visual domains that are very different from its pretraining data. |
+| Temporal reasoning | CLIP | CLIP struggled with before-and-after image reasoning, such as identifying whether an object moved from left to right or right to left. This is because CLIP does not naturally model time, sequence, or causality. |
+| Long video context | VideoChat / Video-Language Model | Video-language models improve over CLIP by adding temporal information, but they can still miss short-lived events in longer videos. In the project experiment, the model missed a blue square that appeared only briefly at the beginning of the video. |
+| Improved image-text alignment | SigLIP | SigLIP improved over CLIP in some tasks because it uses a sigmoid loss instead of CLIP’s softmax contrastive loss. However, SigLIP still inherits some CLIP-like limitations in compositional and relational reasoning. |
+| Multiple-choice VQA | SigLIP | SigLIP can be adapted for multiple-choice VQA by ranking answer prompts, but it cannot naturally generate open-ended answers. Its performance depends heavily on the candidate answer choices. |
+| Generative VQA | PaliGemma | PaliGemma is more suitable for open-ended visual question answering because it combines a SigLIP vision encoder with a Gemma language decoder. Unlike CLIP or SigLIP, it can generate natural-language answers. |
+| Counting | SigLIP and ViLT | SigLIP was uncertain on counting questions, while ViLT performed better on explicit VQA-style counting tasks. This suggests that counting requires stronger object-level grounding and VQA-specific training. |
+| MNIST comparison | CLIP vs SigLIP | SigLIP performed much better than CLIP on zero-shot MNIST classification. In the project results, SigLIP achieved around 78.6% accuracy, while CLIP achieved around 25.3% in a comparable setting. |
+
+
 
 ## Main Conclusion
 
