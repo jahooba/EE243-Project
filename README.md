@@ -14,6 +14,9 @@ The full implementation and experiments are available in Google Colab:
 [Youtube link](https://youtu.be/ux6jaH9LsOQ?si=Hu1cqfGzbD0tTr6D)
 
 ## Project Interpretation Report:
+
+The detailed report on the results and interpretation can be found at-
+
 [Project Report](https://github.com/jahooba/EE243-Project/blob/8a95c1d8743c927c24733b5abaa5af740f171efc/InterpretationReport.pdf)
 
 ## Project Website 
@@ -36,7 +39,7 @@ This project investigates these limitations through a series of experiments.
 
 This project focuses on the following questions:
 
-1. Can CLIP understand object relationships such as “a dog chasing a cat” versus “a cat chasing a dog”?
+1. Can CLIP understand complex object relationships such as “a dog chasing a cat” versus “a cat chasing a dog”?
 2. How sensitive is CLIP to different prompt templates?
 3. Does CLIP focus on the correct image regions when making predictions?
 4. How well does CLIP generalize to out-of-distribution datasets such as MNIST?
