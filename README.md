@@ -141,7 +141,7 @@ This project uses:
 
 ## Author
 
-Joshua Pena, Sayantika Nag
+Sayantika Nag, Joshua Pena
 
 ## Acknowledgment
 
